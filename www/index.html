@@ -12,12 +12,18 @@
   <script>
     let ncmb = new NCMB(appKey, clientKey);
     let UTdata = ncmb.DataStore("UpdateTest");
-    let key = "score";
+    let key = "classRoom";
+    let name = "class";
+    let day = "day";
+    let period = "period";
 
     function enterData() {
       let uTdata = new UTdata();
       let value = parseInt($("#data").val());
       uTdata.set(key, value)
+            .set(name, "HW実験")
+            .set(day, "月曜")
+            .set(period, "1限")
         .save()
         .then(function(results) {
           $("#display").removeClass();
