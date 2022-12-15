@@ -13,17 +13,20 @@
     let ncmb = new NCMB(appKey, clientKey);
     let UTdata = ncmb.DataStore("UpdateTest");
     let key = "classRoom";
-    let name = "class";
+    let class_ = "class";
     let day = "day";
     let period = "period";
 
     function enterData() {
       let uTdata = new UTdata();
       let value = parseInt($("#data").val());
+      let name = parseInt($("#class_").val());
+      let date = parseInt($("#day").val());
+      let time = parseInt($("#period").val());
       uTdata.set(key, value)
-            .set(name, "HW実験")
-            .set(day, "月曜")
-            .set(period, "1限")
+            .set(class_, name)
+            .set(day, date)
+            .set(period, time)
         .save()
         .then(function(results) {
           $("#display").removeClass();
@@ -120,7 +123,10 @@ $("#display").html("update fail:" + JSON.stringify(error));
 <body>
   <h1 class="text-light bg-secondary">mbaas update</h1>
   <div>
-    <input type="text" id="data" placeholder="スコア">
+    <input type="text" id="data" placeholder="教室名">
+    <input type="text" id="class_" placeholder="授業名">
+    <input type="text" id="day" placeholder="曜日">
+    <input type="text" id="period" placeholder="○限">
     <a onclick="enterData()" class="btn btn-outline-secondary" role="button">Enter</a>
   </div>
   <div>
