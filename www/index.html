@@ -127,18 +127,14 @@ $("#display").html("update fail:" + JSON.stringify(error));
     <input type="text" id="class_" placeholder="授業名">
     <input type="text" id="day" placeholder="曜日">
     <input type="text" id="period" placeholder="○限">
-    <a onclick="enterData()" class="btn btn-outline-secondary" role="button">Enter</a>
+    <a onclick="enterData()" class="btn btn-outline-secondary" role="button">登録</a>
   </div>
   <div>
-    <a onclick="fetchAll()" class="btn btn-outline-secondary" role="buton">Fetch All</a>
-    <a onclick="sortData()" class="btn btn-outline-primary" role="button">Sort</a>
-    <a onclick="countData()" class="btn btn-outline-primary" role="button">Count</a>
-    <a onclick="deleteData()" class="btn btn-outline-primary" role="buton">Delete</a>
+    <a onclick="fetchAll()" class="btn btn-outline-secondary" role="buton">授業一覧</a>
+    <a onclick="sortData()" class="btn btn-outline-primary" role="button">教室順</a>
+    <a onclick="deleteData()" class="btn btn-outline-primary" role="buton">削除</a>
   </div>
-  <div>
-    <input type="text" id="update" placeholder="更新">
-    <a onclick="updateData()" class="btn btn-outline-primary" role="button">Update</a>
-  </div>
+ 
   <div id="display" class="text-light bg-info">
     Results
   </div>
