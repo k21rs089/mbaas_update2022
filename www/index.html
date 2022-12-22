@@ -45,7 +45,7 @@
         .then(function(results) {
           let msg = "";
           for (let i = 0; i < results.length; i++) {
-            msg += results[i].get(key) + "<br>";
+            msg += results[i].get(key) +results[i].get(class_) +results[i].get(day)+results[i].get(period)+ "<br>";
           }
           $("#display").removeClass();
           $("#display").addClass("text-light");
@@ -63,7 +63,7 @@
         .then(function(results) {
           let msg = "";
           for (let i = 0; i < results.length; i++) {
-            msg += results[i].get(key) + "<br>";
+            msg += results[i].get(key) +results[i].get(class_) +results[i].get(day)+results[i].get(period)+ "<br>";
           }
           $("#display").removeClass();
           $("#display").addClass("text-light");
@@ -121,7 +121,7 @@ $("#display").html("update fail:" + JSON.stringify(error));
 </head>
 
 <body>
-  <h1 class="text-light bg-secondary">mbaas update</h1>
+  <h1 class="text-light bg-secondary">授業一覧</h1>
   <div>
     <input type="text" id="data" placeholder="教室名">
     <input type="text" id="class_" placeholder="授業名">
