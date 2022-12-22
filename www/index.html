@@ -20,9 +20,9 @@
     function enterData() {
       let uTdata = new UTdata();
       let value = parseInt($("#data").val());
-      let name = parseInt($("#class_").val());
-      let date = parseInt($("#day").val());
-      let time = parseInt($("#period").val());
+      let name = ($("#class_").val());
+      let date = ($("#day").val());
+      let time = ($("#period").val());
       uTdata.set(key, value)
             .set(class_, name)
             .set(day, date)
