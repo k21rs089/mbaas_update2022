@@ -19,7 +19,7 @@
 
     function enterData() {
       let uTdata = new UTdata();
-      let value = parseInt($("#data").val());
+      let value =($("#data").val());
       let name = ($("#class_").val());
       let date = ($("#day").val());
       let time = ($("#period").val());
@@ -121,7 +121,7 @@ $("#display").html("update fail:" + JSON.stringify(error));
 </head>
 
 <body>
-  <h1 class="text-light bg-secondary">授業一覧</h1>
+  <h1 class="text-light bg-secondary">授業登録</h1>
   <div>
     <input type="text" id="data" placeholder="教室名">
     <input type="text" id="class_" placeholder="授業名">
